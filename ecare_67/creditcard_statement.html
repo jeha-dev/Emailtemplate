@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>광주은행 이메일템플릿 - 08월 신용카드 이용대금 명세서</title>
+    <style>
+        /******** reset css ********/
+        html,body,div,p,h1,h2,h3,h4,h5,h6,strong,span,label,legend, ul,ol,li,dl,dt,dd,table,thead,tbody,tr,th,td,tfoot,img,a,button,footer,section{padding:0;margin:0;}
+        ul,ol,li{list-style:none;}
+        button{background:transparent;cursor:pointer;}
+        img{max-width:100%;vertical-align:top;}
+        img,button,fieldset,table, tfoot{border:0;}
+        address{font-style:normal;}
+        label,a{display:inline-block;}
+        h2,h3,strong,em{font-weight:600;}
+        input,select,label,button,textarea{border-radius:0;-webkit-border-radius:0;background-color:transparent;color:#111;font-size:14px;line-height:normal;font-family:"NotoSansKR", sans-serif, Malgungothic, "맑은고딕", Dotum, "돋움";vertical-align:middle;}
+        table{width:100%;border-spacing:0;}
+        th, td{word-break:keep-all;word-wrap:break-word;}
+        a{border:0;color:#444;text-decoration:none;}
+        a:hover{color:#0070D2;text-decoration:none;}
+        *, *:before, *:after{box-sizing:border-box;}
+        *:focus{outline:0;}
+        html,body{height:100%;}
+        caption,legend, .hidden, .hide{position:absolute !important;top:0 !important;left:0 !important;padding:0 !important;border:0 !important;overflow:hidden !important;width:0 !important;height:0 !important;line-height:0 !important;}
+        body{width:800px;margin:0 auto;padding:30px 0;font-family:'Noto Sans CJK KR', sans-serif;font-size:13px;font-weight:400;color:#3a3a3a;line-height:normal;-webkit-word-break:keep-all;-moz-word-break:keep-all;word-break:keep-all;word-wrap:break-word;}
+        
+        /******** common css ********/
+        /* section */
+        .tal{text-align:left !important;}
+        .tac{text-align:center !important;}
+        .tar{text-align:right !important;}
+        .clear:after{content:'';display:block;clear:both;}
+        .txt-black{color:#111111 !important;margin:0 !important}
+        .txt-gray{font-size:14px;color:#999999;}
+        .bold-blue{color:#0070D2 !important;font-weight:600 !important;font-size:20px !important;}
+        .title-desc{margin-bottom:50px;font-size:16px;}
+        .cont-head h1{width:173px;height:34px;text-indent:-9999px;background:url('../img/pc_logo.png') no-repeat;background-position: 0 0;}
+        @media screen and (min-width:360px) and (max-width:720px){
+            .cont-head h1{width:173px;height:34px;background:url('../img/mb_logo.png') no-repeat cover;background-position: 0 0;}
+        }
+        .cont-head h2{margin-top:26px;font-size:40px;color:#1F1A60;}
+        .cont-body h3{position:relative;margin-bottom:20px;padding-bottom:10px;font-size:20px;color:#111; border-bottom:1px solid #CCCCCC;}
+        .cont-body h3 ~ h3{margin-top:30px;}
+        .cont-body h3:after{content:'';display:block;position:absolute;top:12px;right:10px;width:12px;height:8px; background:url('../img/arrow.png') no-repeat 0 0;}
+        .cont-body h3 .info-unit{position:absolute;top:3px;right:36px;font-size:14px;font-weight:400;color:#999;}
+        .cont-body h3 .bold-blue{top:0px;}
+        .cont-body h4{margin-bottom:10px;color:#111;font-size:16px;}
+        .cont-body h4 ~ h4{margin-top:20px;}
+        .cont-body h4 + ul {margin-bottom:20px;}
+        .cont-body ul{font-size:14px;}
+        .cont-body ol{font-size:14px;}
+        .cont-body .list-dot{margin-bottom:20px;}
+        .cont-body .list-dot li{position:relative;padding-left:10px;list-style-position:inside;font-size:14px;}
+        .cont-body .list-dot li:before{content:'•';display: inline-block;position:absolute;top:0;left:0;}
+        .cont-body .bluebox{width:100%;height:auto;margin-bottom:20px;padding:15px;background:#EFF8FF;font-size:14px;box-sizing:border-box;}
+        .cont-body .bluebox h4{position:relative;margin-bottom:10px;padding-left:20px;font-size:16px;font-weight:600;color:#111;}
+        .cont-body .bluebox h4:before{content:'';display:block;position:absolute;top:5px;left:0px; width:16px;height:16px;padding-right:5px;background:url('../img/ico_info.png') no-repeat;}
+        .cont-body .bluebox strong{font-size:16px;color:#4D4D4D;}
+        .cont-body .bluebox strong.dot{display:inline-block;margin-bottom:10px;color:#111;}
+        .cont-body .bluebox strong.dot:before{content:'•';display:inline-block;padding-right:6px;}
+        .cont-body .bluebox strong.check{position:relative;font-weight:600;color:#0070D2;}
+        .cont-body .bluebox strong.check:before{content:'';display: inline-block;}
+
+        .tab-menu{height:40px;margin-top:30px;margin-bottom:50px;}
+        .tab-menu > button{display:block;float:left;min-width:160px;height:40px;margin-left:4px;background:#EFEFEF;font-size:16px;color:#4d4d4d;text-align:center;line-height:40px;}
+        .tab-menu > button:first-child{margin-left:0;}
+        .tab-menu > button.active,
+        .tab-menu > button:hover{background:#0070D2;color:#fff;font-weight:600;}
+        .tab-content{display:none;}
+        .tab-content.active{display:block;}
+
+        table{margin-bottom:30px;}
+        table tr:first-child th, table tr:first-child td{border-top:1px solid #DADADA;}
+        table tr > th:first-child{border-left:0}
+        table th{padding:5px;background:#CCE9FF;font-size:12px;font-weight:600;border-bottom:1px solid #DADADA;border-left:1px solid #DADADA;}
+        table td{padding:5px 10px;background:#fff;font-size: 12px;text-align:center;border-bottom: 1px solid #DADADA;border-left:1px solid #DADADA;}
+        .tab ul + table{margin-bottom:20px;}
+        .tab .table-title{margin-bottom:10px;font-size:14px;}
+        .tab .total-bold{font-weight:600;color:#4d4d4d;}
+        .tab .image-box {overflow:hidden;}
+        .tab .image-box img{max-width:100%;}
+
+        /* 파란배경이 없는 테이블의 경우 .table-white 클래스 사용*/
+        .tab .table-white th, .tab .table-white td{font-size:14px;}
+        .tab .table-white th{background:#fff;text-align:left;border:0;font-weight:400 !important;}
+        .tab .table-white td{background:#fff;text-align:left;border:0;}
+        .tab .table-white tr:first-child th, .tab .table-white tr:first-child td{border-top:0;}
+        .tab .caution ul {color:#999; list-style:none !important;text-indent:0;margin-bottom:0;padding-left:14px;}
+        .tab .caution ul li:before {content:"\2022";color:#dadada !important;font-weight:bold;display:inline-block;width:1em;margin-left:-1em;}
+        .tab .caution p{color:#999;font-size:14px;}
+
+        /* 푸터 */
+        footer{padding-top:80px;padding-bottom:30px;color:#9A9A9A;}
+        footer dl{display: table;}
+        footer dt,footer dd{display: table-cell;}
+        footer .footer-logo{width:105px;height:22px;text-indent:-9999px; background:url('../img/pc_logogray.png') no-repeat; background-position: 0 0;}
+        footer dd{padding-left:36px;}
+        footer p{padding-top:10px;}
+        @media screen and (min-width:360px) and (max-width:720px){
+            footer .footer-logo{background:url('../img/mb_logogray.png') no-repeat cover; background-position: 0 0;}
+        }
+    </style>
+    <script>
+        'use strict';
+        window.onload = function(){
+
+            /* Function :: tab - inside tab */
+            // IE11 forEach support
+            if (window.NodeList && !NodeList.prototype.forEach) {
+                NodeList.prototype.forEach = Array.prototype.forEach;
+            }
+
+            function findParent(el, className){
+                let check = el.parentNode.classList.contains(className);
+            
+                if(check == true){
+                    return el.parentNode;
+                }else{
+                    return findParent(el.parentNode, className);
+                }
+            }
+
+            function bindingTab(container){
+                let containEl = document.querySelectorAll(container);
+            
+                containEl.forEach(function(tabArea){
+                    let tabLink = tabArea.querySelectorAll('.tab-link');
+                    
+                    tabLink.forEach(function(item){
+
+                        item.addEventListener('click', function(){
+                            // 변수설정
+                            let parent = findParent(this, 'tab');
+                            let idx = this.dataset['idx'];
+                            let depth = this.dataset['depth'];
+                            let tabLinkArr = parent.querySelectorAll('.tab-link[data-depth="'+ depth +'"]');
+                            let contentArr = parent.querySelectorAll('.tab-content[data-depth="'+ depth +'"]');
+                            
+                            // 활성화
+                            tabLinkArr.forEach(function(tabLink){ tabLink.classList.remove('active'); });
+                            this.classList.add('active');
+                            contentArr.forEach(function(content){ content.classList.remove('active'); });
+                            parent.querySelector('.tab-content[data-idx="'+ idx +'"][data-depth="'+ depth +'"]').classList.add('active');
+
+                        });
+                    });
+                });
+            }
+            bindingTab('.tab-wrap');
+        }
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="content">
+            <section class="cont-head">
+                <h1>광주은행</h1>
+                <h2><span class="guestname">홍길동</span>&nbsp;고객님</h2>
+                <h2 class="txt-black">08월 신용카드 이용대금 명세서</h2>
+            </section>
+            <section class="cont-body">
+
+                <div class="tab-wrap tab">
+                    <div class="tab-menu clear">
+                        <button class="tab-link active" data-depth="0" data-idx="0">이용대금명세서</button>
+                        <button class="tab-link" data-depth="0" data-idx="1">카드이용내역</button>
+                        <button class="tab-link" data-depth="0" data-idx="2">회원소식지</button>
+                        <button class="tab-link" data-depth="0" data-idx="3">이용안내</button>
+                    </div>
+                    <!-- 이용대금명세서// -->
+                    <div class="tab-content active" data-depth="0" data-idx="0">
+                        <table class="table-white" style="width:85%;margin-bottom:50px;">
+                            <caption>기본 정보</caption>
+                            <colgroup>
+                                <col style="width:5%;">
+                                <col style="width:20%;">
+                                <col style="width:5%;">
+                                <col style="width:15%;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>결제일</th>
+                                    <td>2021.08.20</td>
+                                    <th>결제계좌</th>
+                                    <td>000*****1234(광주은행)</td>
+                                </tr>
+                                <tr>
+                                    <th>출금일</th>
+                                    <td>2021.08.20</td>
+                                    <th>작성기준일</th>
+                                    <td>2021.08.20</td>
+                                </tr>
+                                <tr>
+                                    <th>이용기간</th>
+                                    <td>2021.07.06 ~ 2021.08.05</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3>입금하실 금액 <span class="info-unit bold-blue">111,111,111원</span></h3>
+                        <table class="table-white">
+                            <caption>기본 정보</caption>
+                            <colgroup>
+                                <col style="width:10%;">
+                                <col style="width:15%;">
+                                <col style="width:10%;">
+                                <col style="width:15%;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th class="tal">연회비/SMS</th>
+                                    <td class="tar" style="padding-right:15px;">10,000원</td>
+                                    <th class="tal">국내이용(기출금)</th>
+                                    <td class="tar">111,111,111원</td>
+                                </tr>
+                                <tr>
+                                    <th class="tal">후불교통</th>
+                                    <td class="tar" style="padding-right:15px;">20,000원</td>
+                                    <th class="tal">할인금액</th>
+                                    <td class="tar">50,240,000원</td>
+                                </tr>
+                                <tr>
+                                    <th class="tal">포인트결제</th>
+                                    <td class="tar" style="padding-right:15px;">240,000원</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3>포인트 및 마일리지</h3>
+                        <table style="margin-bottom:20px;">
+                            <caption>포인트 및 마일리지 정보</caption>
+                            <colgroup>
+                                <col style="width:12%;">
+                                <col style="width:12%;">
+                                <col style="width:12%;">
+                                <col style="width:12%;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="col">포인트명</th>
+                                    <th scope="col">잔여</th>
+                                    <th scope="col">기준일</th>
+                                    <th scope="col">소멸예정</th>
+                                </tr>
+                                <tr>
+                                    <td style="border-left:0;">K포인트</td>
+                                    <td>15,000원</td>
+                                    <td>21.08.05</td>
+                                    <td>2,300원</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-left:0;">Oh포인트</td>
+                                    <td>15,000원</td>
+                                    <td>21.08.05</td>
+                                    <td>2,300원</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-left:0;">아시아나</td>
+                                    <td>15,000원</td>
+                                    <td>21.08.05</td>
+                                    <td>2,300원</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <table>
+                            <caption>포인트 및 마일리지 정보2</caption>
+                            <colgroup>
+                                <col style="width:50%;">
+                                <col style="width:50%;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="col">소멸예정일</th>
+                                    <th scope="col">소멸예정포인트</th>
+                                </tr>
+                                <tr>
+                                    <td style="border-left:0;">2021.08.20</td>
+                                    <td>15,000원</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-left:0;">2021.08.20</td>
+                                    <td>15,000원</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-left:0;">2021.08.20</td>
+                                    <td>15,000원</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3>총 이용한도 <span class="info-unit bold-blue">111,111,111원</span></h3>
+                        <table class="table-white" style="margin-bottom:0;">
+                            <caption>총 이용한도 정보</caption>
+                            <colgroup>
+                                <col style="width:25%;">
+                                <col style="width:25%;">
+                                <col style="width:25%;">
+                                <col style="width:25%;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>일일 이용한도</th>
+                                    <td class="tar">10,000원</td>
+                                    <th>월간 이용한도</th>
+                                    <td class="tar">50,240,000원</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="caution" style="margin-top:50px;">
+                            <ul>
+                                <li>개인회원의 경우 K포인트는 카드별 포인트가 아닌 고객별 통합 포인트로 관리됩니다.</li>
+                                <li>적립 후 5년이 경과한 미사용 포인트는 선입선출에 의해 순차적으로 자동 소멸됩니다.</li>
+                                <li>잔여포인트는 금월 적립 예정포인트 포함 전이며, 소멸예정일 전 사용, 인출이 있는 경우 잔여포인트가 줄어들 수 있습니다.</li>
+                                <li>아시아나 마일리지는 당해년도 적립 누적액이며, 사용가능 마일리지는 '아시아나항공 홈페이지'에서 조회 가능합니다.</li>
+                                <li>자녀교육/두자녀 카드는 '학원비 캐시백'을 받을 경우 학원비에 대한 포인트는 적립되지 않습니다.</li>
+                                <li>연체료율은 약정이율 + 최대 3%, 법정최고 금리(20%)이내로 적용됩니다.</li>
+                            </ul>
+                            <p>단, 연체발생 시점에 약정금리가 없는 경우는 아래와 같이 적용합니다.</p>
+                            <p>
+                                - 일시불 거래를 연체한 경우 약정이율은 거래 발생시점의 2개월 할부수수료율을 대용하며, 무이자 할부거래를 연체한 경우 약정이율은
+                                거래 발생시점의 동일한 할부계약기간의 유이자 할부수수료율을 대용합니다.
+                            </p>
+                            <p>
+                                - 그 외의 경우 약정이율은 상사법정이율 또는 상호금융 가계자금대출금리* 중 높은금리(대부업고시제3조제2항제2호)를 대용합니다.
+                            </p>
+                            <p>※ 한국은행에서 매월 발표하는 가장 최근의 비은행 금융기관 가중평균대출금리(신규대출기준) 카드 및 대출금을 연체(타 금융기관 포함)하실 경우 회원님의 카드 사용한도가 축소되거나 카드사용이 정지될 수 있습니다.</p>
+                        </div>
+                    </div>
+                    <!-- //이용대금명세서 -->
+
+                    <!-- 카드이용내역// -->
+                    <div class="tab-content" data-depth="0" data-idx="1">
+                        <h3>카드이용내역</h3>
+                        <!-- 개인신용// -->
+                        <table style="margin-bottom:50px;">
+                            <caption>카드이용내역 - 개인신용의 경우</caption> 
+                            <colgroup>
+                                <col style="width:60px;">
+                                <col style="width:170px;">
+                                <col style="width:90px;">
+                                <col style="width:35px;">
+                                <col style="width:90px;">
+                                <col style="width:62px;">
+                                <col style="width:62px;">
+                                <col style="width:75px;">
+                                <col style="width:35px;">
+                                <col style="width:84px;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="col">이용일</th>
+                                    <th scope="col">이용가맹점</th>
+                                    <th scope="col">이용금액</th>
+                                    <th scope="col">회차</th>
+                                    <th scope="col">입금하실금액</th>
+                                    <th scope="col">수수료</th>
+                                    <th scope="col">할인혜택</th>
+                                    <th scope="col">적립(예정)<br>포인트</th>
+                                    <th scope="col">구분</th>
+                                    <th scope="col">잔액/<br>해외이용금액</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="5" class="tal" style="border-left:0;background:#EFF8FF;">주카드 : 123456-***-****985 [1st 카드] 22건</td>
+                                    <td colspan="5" class="tar"  style="border-left:0;background:#EFF8FF;">(광주은행)000*****1234</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-left:0;">21.07.07</td>
+                                    <td>㈜우아한형제들-신용카드<br>(배달의민족)</td>
+                                    <td>6,000,000</td>
+                                    <td>12</td>
+                                    <td>5,999,000</td>
+                                    <td>0</td>
+                                    <td>-1,000</td>
+                                    <td>0</td>
+                                    <td></td>
+                                    <td>126,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-left:0;">21.07.07</td>
+                                    <td>㈜우아한형제들-신용카드<br>(배달의민족)</td>
+                                    <td>6,000,000</td>
+                                    <td>12</td>
+                                    <td>5,999,000</td>
+                                    <td>0</td>
+                                    <td>-1,000</td>
+                                    <td>0</td>
+                                    <td></td>
+                                    <td>126,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-left:0;">21.07.07</td>
+                                    <td>㈜우아한형제들-신용카드<br>(배달의민족)</td>
+                                    <td>6,000,000</td>
+                                    <td>12</td>
+                                    <td>5,999,000</td>
+                                    <td>0</td>
+                                    <td>-1,000</td>
+                                    <td>0</td>
+                                    <td></td>
+                                    <td>126,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-left:0;">21.07.07</td>
+                                    <td>㈜우아한형제들-신용카드<br>(배달의민족)</td>
+                                    <td>6,000,000</td>
+                                    <td>12</td>
+                                    <td>5,999,000</td>
+                                    <td>0</td>
+                                    <td>-1,000</td>
+                                    <td>0</td>
+                                    <td></td>
+                                    <td>126,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-left:0;">21.07.07</td>
+                                    <td>㈜우아한형제들-신용카드<br>(배달의민족)</td>
+                                    <td>6,000,000</td>
+                                    <td>12</td>
+                                    <td>5,999,000</td>
+                                    <td>0</td>
+                                    <td>-1,000</td>
+                                    <td>0</td>
+                                    <td></td>
+                                    <td>126,000,000</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th colspan="4" style="border-top:0;border-left:0;background:#fff;">카드소계(안석남)</td>
+                                    <td style="border-top:0;">111,111,111</td>
+                                    <td style="border-top:0;">26,250</td>
+                                    <td style="border-top:0;">-1,000</td>
+                                    <td style="border-top:0;"></td>
+                                    <td style="border-top:0;"></td>
+                                    <td style="border-top:0;"></td>
+                                </tr>
+                                <tr class="total-bold">
+                                    <th colspan="4" style="border-top:0;border-left:0;">합계</td>
+                                    <td style="border-top:0;">111,111,111</td>
+                                    <td style="border-top:0;">26,250</td>
+                                    <td style="border-top:0;">-1,000</td>
+                                    <td style="border-top:0;">505,810</td>
+                                    <td style="border-top:0;"></td>
+                                    <td style="border-top:0;"></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <div class="caution">
+                                <ul>
+                                    <li>상기 이용내역은 당사에 작성기준일까지 접수된 건에 한하며, 이후 접수분은 익월에 포함됩니다.</li>
+                                    <li>정상금액과 취소금액이 일치한 경우에는 해당내역이 표시되지 않을 수 있으며, 명세서 작성기준일 이후 거래(매입/취소)내역이 있는 경우 명세서 표기금액과 실제 결제할 금액이 상이할 수 있습니다.</li>
+                                    <li>이용대금 명세서 작성기준일 당일 매입된 거래는 이용내역 적립(예정)포인트에 포함되어 있지 않습니다.</li>
+                                    <li>하이패스, 교통카드 이용금액은 해당 이용기간의 합산금액을 표시하며, 상세내역은 광주은행 홈페이지에서 조회 가능합니다.</li>
+                                    <li>연체료는 명세서 작성기준일에 미결제된 원금에 대하여 결제일까지 미리 계산된 것입니다.</li>
+                                    <li>본 이용대금 명세서에 이의가 있으시면 지정결제일 이전에 가까운 광주은행 영업점에 문의하여 주십시오.</li>
+                                    <li>아시아나제휴카드는 [K포인트 가맹점] 사용금액에 대해서 우대 K포인트는 적립됩니다.</li>
+                                </ul>
+                        </div>
+                        <!-- //개인신용 -->
+
+                        <!-- 개인체크// -->
+                        <table style="margin-bottom:50px;">
+                            <caption>카드이용내역 - 개인체크의 경우</caption> 
+                            <colgroup>
+                                <col style="width:60px;">
+                                <col style="width:170px;">
+                                <col style="width:90px;">
+                                <col style="width:90px;">
+                                <col style="width:62px;">
+                                <col style="width:62px;">
+                                <col style="width:55px;">
+                                <col style="width:84px;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="col">이용일</th>
+                                    <th scope="col">이용가맹점</th>
+                                    <th scope="col">이용금액</th>
+                                    <th scope="col">입금하실금액</th>
+                                    <th scope="col">수수료</th>
+                                    <th scope="col">할인혜택</th>
+                                    <th scope="col">구분</th>
+                                    <th scope="col">적립(예정)<br>포인트</th>
+                                    <th scope="col">해외이용금액</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" class="tal" style="border-left:0;background:#EFF8FF;">주카드 : 123456-***-****985 [1st 카드] 22건</td>
+                                    <td colspan="5" class="tar"  style="border-left:0;background:#EFF8FF;">(광주은행)000*****1234</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-left:0;">21.07.07</td>
+                                    <td>㈜우아한형제들-신용카드<br>(배달의민족)</td>
+                                    <td>6,000,000</td>
+                                    <td>5,999,000</td>
+                                    <td>0</td>
+                                    <td>-1,000</td>
+                                    <td></td>
+                                    <td>0</td>
+                                    <td>126,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-left:0;">21.07.08</td>
+                                    <td>㈜우아한형제들-신용카드<br>(배달의민족)</td>
+                                    <td>6,000,000</td>
+                                    <td>5,999,000</td>
+                                    <td>0</td>
+                                    <td>-1,000</td>
+                                    <td></td>
+                                    <td>0</td>
+                                    <td>126,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-left:0;">21.07.10</td>
+                                    <td>㈜우아한형제들-신용카드<br>(배달의민족)</td>
+                                    <td>6,000,000</td>
+                                    <td>5,999,000</td>
+                                    <td>0</td>
+                                    <td>-1,000</td>
+                                    <td></td>
+                                    <td>0</td>
+                                    <td>126,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-left:0;">21.07.11</td>
+                                    <td>㈜우아한형제들-신용카드<br>(배달의민족)</td>
+                                    <td>6,000,000</td>
+                                    <td>5,999,000</td>
+                                    <td>0</td>
+                                    <td>-1,000</td>
+                                    <td></td>
+                                    <td>0</td>
+                                    <td>126,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-left:0;">21.07.12</td>
+                                    <td>㈜우아한형제들-신용카드<br>(배달의민족)</td>
+                                    <td>6,000,000</td>
+                                    <td>5,999,000</td>
+                                    <td>0</td>
+                                    <td>-1,000</td>
+                                    <td></td>
+                                    <td>0</td>
+                                    <td>126,000,000</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th colspan="3" style="border-top:0;border-left:0;background:#fff;">카드소계(안석남)</td>
+                                    <td style="border-top:0;">111,111,111</td>
+                                    <td style="border-top:0;">26,250</td>
+                                    <td style="border-top:0;">-1,000</td>
+                                    <td style="border-top:0;"></td>
+                                    <td style="border-top:0;"></td>
+                                    <td style="border-top:0;"></td>
+                                </tr>
+                                <tr class="total-bold">
+                                    <th colspan="3" style="border-top:0;border-left:0;">합계</td>
+                                    <td style="border-top:0;">111,111,111</td>
+                                    <td style="border-top:0;">26,250</td>
+                                    <td style="border-top:0;">-1,000</td>
+                                    <td style="border-top:0;"></td>
+                                    <td style="border-top:0;">505,810</td>
+                                    <td style="border-top:0;">126,000,000</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <div class="caution">
+                            <ul>
+                                <li>상기 이용내역은 당사에 작성기준일까지 접수된 건에 한하며, 이 후 접수분은 익월에 포함됩니다.</li>
+                                <li>정상금액과 취소금액이 일치한 경우에는 해당내역이 표시되지 않을 수 있으며, 명세서 작성기준일 이후 거래(매입/취소)내역이 있는 경우 명세서 표기금액과 실제 결제할 금액이 상이할 수 있습니다.</li>
+                                <li>이용대금 명세서 작성기준일 당일 매입된 거래는 이용내역 적립(예정)포인트에 포함되어 있지 않습니다.</li>
+                                <li>하이패스, 교통카드 이용금액은 해당 이용기간의 합산금액을 표시하며, 상세내역은 광주은행 홈페이지에서 조회 가능합니다.</li>
+                                <li>연체료는 명세서 작성기준일에 미결제된 원금에 대하여 결제일까지 미리 계산된 것입니다.</li>
+                                <li>본 이용대금 명세서에 이의가 있으시면 지정결제일 이전에 가까운 광주은행 영업점에 문의하여 주십시오.</li>
+                            </ul>
+                        </div>
+                        <!-- //개인체크 -->
+
+                        <!-- 기업신용// -->
+                        <table style="margin-bottom:50px;">
+                            <caption>카드이용내역 - 기업신용의 경우</caption> 
+                            <colgroup>
+                                <col style="width:54px;">
+                                <col style="width:145px;">
+                                <col style="width:70px;">
+                                <col style="width:26px;">
+                                <col style="width:85px;">
+                                <col style="width:60px;">
+                                <col style="width:60px;">
+                                <col style="width:80px;">
+                                <col style="width:38px;">
+                                <col style="width:74px;">
+                                <col style="width:68px;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="col">이용일</th>
+                                    <th scope="col">이용가맹점</th>
+                                    <th scope="col">이용금액</th>
+                                    <th scope="col">회차</th>
+                                    <th scope="col">입금하실금액</th>
+                                    <th scope="col">수수료</th>
+                                    <th scope="col">할인혜택</th>
+                                    <th scope="col">적립(예정)<br>포인트</th>
+                                    <th scope="col">구분</th>
+                                    <th scope="col">잔액/<br>해외이용금액</th>
+                                    <th scope="col">부가가치세</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" class="tal" style="border-left:0;background:#EFF8FF;">주카드 : 123456-***-****985 [1st 카드] 22건</td>
+                                    <td colspan="5" class="tar"  style="border-left:0;background:#EFF8FF;">(광주은행)000*****1234</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-left:0;">21.07.07</td>
+                                    <td>㈜우아한형제들-신용카드<br>(배달의민족)</td>
+                                    <td>6,000,000</td>
+                                    <td>6</td>
+                                    <td>5,999,000</td>
+                                    <td>0</td>
+                                    <td>-1,000</td>
+                                    <td>0</td>
+                                    <td></td>
+                                    <td>126,000,000</td>
+                                    <td>126,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-left:0;">21.07.08</td>
+                                    <td>㈜우아한형제들-신용카드<br>(배달의민족)</td>
+                                    <td>6,000,000</td>
+                                    <td>6</td>
+                                    <td>5,999,000</td>
+                                    <td>0</td>
+                                    <td>-1,000</td>
+                                    <td>0</td>
+                                    <td></td>
+                                    <td>126,000,000</td>
+                                    <td>126,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-left:0;">21.07.10</td>
+                                    <td>㈜우아한형제들-신용카드<br>(배달의민족)</td>
+                                    <td>6,000,000</td>
+                                    <td>6</td>
+                                    <td>5,999,000</td>
+                                    <td>0</td>
+                                    <td>-1,000</td>
+                                    <td>0</td>
+                                    <td></td>
+                                    <td>126,000,000</td>
+                                    <td>126,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-left:0;">21.07.11</td>
+                                    <td>㈜우아한형제들-신용카드<br>(배달의민족)</td>
+                                    <td>6,000,000</td>
+                                    <td>6</td>
+                                    <td>5,999,000</td>
+                                    <td>0</td>
+                                    <td>-1,000</td>
+                                    <td>0</td>
+                                    <td></td>
+                                    <td>126,000,000</td>
+                                    <td>126,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-left:0;">21.07.12</td>
+                                    <td>㈜우아한형제들-신용카드<br>(배달의민족)</td>
+                                    <td>6,000,000</td>
+                                    <td>6</td>
+                                    <td>5,999,000</td>
+                                    <td>0</td>
+                                    <td>-1,000</td>
+                                    <td>0</td>
+                                    <td></td>
+                                    <td>126,000,000</td>
+                                    <td>126,000,000</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th colspan="4" style="border-top:0;border-left:0;background:#fff;">카드소계(안석남)</td>
+                                    <td style="border-top:0;">111,111,111</td>
+                                    <td style="border-top:0;">26,250</td>
+                                    <td style="border-top:0;">-1,000</td>
+                                    <td style="border-top:0;"></td>
+                                    <td style="border-top:0;"></td>
+                                    <td style="border-top:0;"></td>
+                                    <td style="border-top:0;">126,000,000</td>
+                                </tr>
+                                <tr class="total-bold">
+                                    <th colspan="4" style="border-top:0;border-left:0;">합계</td>
+                                    <td style="border-top:0;">111,111,111</td>
+                                    <td style="border-top:0;">26,250</td>
+                                    <td style="border-top:0;">-1,000</td>
+                                    <td style="border-top:0;">505,810</td>
+                                    <td style="border-top:0;"></td>
+                                    <td style="border-top:0;"></td>
+                                    <td style="border-top:0;">126,000,000</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <div class="caution">
+                            <ul>
+                                <li>상기 이용내역은 당사에 작성기준일까지 접수된 건에 한하며, 이 후 접수분은 익월에 포함됩니다.</li>
+                                <li>정상금액과 취소금액이 일치한 경우에는 해당내역이 표시되지 않을 수 있으며, 명세서 작성기준일 이후 거래(매입/취소)내역이 있는 경우 명세서 표기금액과 실제 결제할 금액이 상이할 수 있습니다.</li>
+                                <li>이용대금 명세서 작성기준일 당일 매입된 거래는 이용내역 적립(예정)포인트에 포함되어 있지 않습니다.</li>
+                                <li>하이패스, 교통카드 이용금액은 해당 이용기간의 합산금액을 표시하며, 상세내역은 광주은행 홈페이지에서 조회 가능합니다.</li>
+                                <li>연체료는 명세서 작성기준일에 미결제된 원금에 대하여 결제일까지 미리 계산된 것입니다.</li>
+                                <li>본 이용대금 명세서에 이의가 있으시면 지정결제일 이전에 가까운 광주은행 영업점에 문의하여 주십시오.</li>
+                            </ul>
+                        </div>
+                        <!-- //기업신용 -->
+
+                        <!-- 기업체크// -->
+                        <table style="margin-bottom:50px;">
+                            <caption>카드이용내역 - 기업체크의 경우</caption>
+                            <colgroup>
+                                <col style="width:54px;">
+                                <col style="width:160px;">
+                                <col style="width:75px;">
+                                <col style="width:85px;">
+                                <col style="width:62px;">
+                                <col style="width:62px;">
+                                <col style="width:32px;">
+                                <col style="width:75px;">
+                                <col style="width:75px;">
+                                <col style="width:72px;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="col">이용일</th>
+                                    <th scope="col">이용가맹점</th>
+                                    <th scope="col">이용금액</th>
+                                    <th scope="col">입금하실금액</th>
+                                    <th scope="col">수수료</th>
+                                    <th scope="col">할인혜택</th>
+                                    <th scope="col">구분</th>
+                                    <th scope="col">적립(예정)<br>포인트</th>
+                                    <th scope="col">잔액/<br>해외이용금액</th>
+                                    <th scope="col">부가가치세</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="5" class="tal" style="border-left:0;background:#EFF8FF;">주카드 : 123456-***-****985 [1st 카드] 22건</td>
+                                    <td colspan="5" class="tar"  style="border-left:0;background:#EFF8FF;">(광주은행)000*****1234</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-left:0;">21.07.07</td>
+                                    <td>㈜우아한형제들-신용카드<br>(배달의민족)</td>
+                                    <td>6,000,000</td>
+                                    <td>5,999,000</td>
+                                    <td>0</td>
+                                    <td>-1,000</td>
+                                    <td></td>
+                                    <td>0</td>
+                                    <td>126,000,000</td>
+                                    <td>126,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-left:0;">21.07.08</td>
+                                    <td>㈜우아한형제들-신용카드<br>(배달의민족)</td>
+                                    <td>6,000,000</td>
+                                    <td>5,999,000</td>
+                                    <td>0</td>
+                                    <td>-1,000</td>
+                                    <td></td>
+                                    <td>0</td>
+                                    <td>126,000,000</td>
+                                    <td>126,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-left:0;">21.07.10</td>
+                                    <td>㈜우아한형제들-신용카드<br>(배달의민족)</td>
+                                    <td>6,000,000</td>
+                                    <td>5,999,000</td>
+                                    <td>0</td>
+                                    <td>-1,000</td>
+                                    <td></td>
+                                    <td>0</td>
+                                    <td>126,000,000</td>
+                                    <td>126,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-left:0;">21.07.11</td>
+                                    <td>㈜우아한형제들-신용카드<br>(배달의민족)</td>
+                                    <td>6,000,000</td>
+                                    <td>5,999,000</td>
+                                    <td>0</td>
+                                    <td>-1,000</td>
+                                    <td></td>
+                                    <td>0</td>
+                                    <td>126,000,000</td>
+                                    <td>126,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-left:0;">21.07.12</td>
+                                    <td>㈜우아한형제들-신용카드<br>(배달의민족)</td>
+                                    <td>6,000,000</td>
+                                    <td>5,999,000</td>
+                                    <td>0</td>
+                                    <td>-1,000</td>
+                                    <td></td>
+                                    <td>0</td>
+                                    <td>126,000,000</td>
+                                    <td>126,000,000</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th colspan="3" style="border-top:0;border-left:0;background:#fff;">카드소계(안석남)</td>
+                                    <td style="border-top:0;">111,111,111</td>
+                                    <td style="border-top:0;">26,250</td>
+                                    <td style="border-top:0;">-1,000</td>
+                                    <td style="border-top:0;"></td>
+                                    <td style="border-top:0;"></td>
+                                    <td style="border-top:0;"></td>
+                                    <td style="border-top:0;">126,000,000</td>
+                                </tr>
+                                <tr class="total-bold">
+                                    <th colspan="3" style="border-top:0;border-left:0;">합계</td>
+                                    <td style="border-top:0;">111,111,111</td>
+                                    <td style="border-top:0;">26,250</td>
+                                    <td style="border-top:0;">-1,000</td>
+                                    <td style="border-top:0;"></td>
+                                    <td style="border-top:0;">505,810</td>
+                                    <td style="border-top:0;">126,000,000</td>
+                                    <td style="border-top:0;">126,000,000</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <div class="caution">
+                            <ul>
+                                <li>상기 이용내역은 당사에 작성기준일까지 접수된 건에 한하며, 이 후 접수분은 익월에 포함됩니다.</li>
+                                <li>정상금액과 취소금액이 일치한 경우에는 해당내역이 표시되지 않을 수 있으며, 명세서 작성기준일 이후 거래(매입/취소)내역이 있는 경우 명세서 표기금액과 실제 결제할 금액이 상이할 수 있습니다.</li>
+                                <li>이용대금 명세서 작성기준일 당일 매입된 거래는 이용내역 적립(예정)포인트에 포함되어 있지 않습니다.</li>
+                                <li>하이패스, 교통카드 이용금액은 해당 이용기간의 합산금액을 표시하며, 상세내역은 광주은행 홈페이지에서 조회 가능합니다.</li>
+                                <li>연체료는 명세서 작성기준일에 미결제된 원금에 대하여 결제일까지 미리 계산된 것입니다.</li>
+                                <li>본 이용대금 명세서에 이의가 있으시면 지정결제일 이전에 가까운 광주은행 영업점에 문의하여 주십시오.</li>
+                            </ul>
+                        </div>
+                        <!-- //기업체크 -->
+                    </div>
+                    <!-- //카드이용내역 -->
+
+                    <!-- 회원소식지// -->
+                    <div class="tab-content" data-depth="0" data-idx="2">
+                        <h3>광주카드 이벤트</h3>
+                        <div class="image-box"><img src="../img/event1.png" alt="아무튼개인형IRP"></div>
+                        <div class="image-box"><img src="../img/event2.png" alt="알쓸편리"></div>
+                    </div>
+                    <!-- //회원소식지 -->
+
+                    <!-- 이용안내// -->
+                    <div class="tab-content" data-depth="0" data-idx="3">
+
+                        <!-- //체크카드의 경우 -->
+                        <h3>카드이용내역</h3>
+
+                        <h4>해외이용안내</h4>
+                        <ul class="list-dot">
+                            <li>해외에서 신용카드 이용시 IC칩 비밀번호 입력에 필수인 경우가 많습니다.</li>
+                            <li>해외 출국 전 가까운 영업점에 방문하시어 IC칩 비밀번호를 설정하시기 바랍니다.</li>
+                            <li>해외 이용시 국제카드사 수수료(1%)와 해외이용수수료(0.2%)가 포함되어 당사 접수일의 최초 고시 전신환매도율이 적용됩니다.</li>
+                            <li>해외가맹점에서 원화(KRW)로 결제하실 경우 가맹점에서 일정의 수수료가 부과되며 국제 브랜드사를 통해 미화(USD)로 환산된 후
+                                원화로 재전환되어 청구됩니다. 이와 같이 이중환전 등의 불이익을 방지하기 위해 해외가맹점 이용시 현지통화로 거래하시는 것이
+                                유리합니다.
+                            </li>
+                        </ul>
+
+                        <h4>체크카드 이용시간 안내</h4>
+                        <ul class="list-dot">
+                            <li>해당시간대에 은행 전산시스템 점검으로 일시 사용이 중단됩니다.<br>
+                                - 일일 점검시간 : 매일 00:00 ~ 00:0(10분간)<br>
+                                - 월중 점검시간 : 매월 2주차 일요일 02:00 ~ 06:00(4시간)
+                            </li>
+                            <li>제한시간내 K-TWINS카드의 체크결제는 신용결제로 대행승인이 이루어집니다.</li>
+                        </ul>
+
+                        <h4>할부거래에 따른 철회권/항변권/기한이익 상실안내</h4>
+                        <ul class="list-dot">
+                            <li>
+                                카드의 전월실적은 광주은행 홈페이지(<a href="">www.kjbank.com</a>)에서 확인하실 수 있습니다.
+                                <br>(전체메뉴 ▶ 카드 ▶ 카드조회 ▶ 이용실적현황)
+                            </li>
+                        </ul>
+
+                        <h4>이용한도 및 신용정보 제공 · 활용에 대한 안내</h4>
+                        <ul class="list-dot">
+                            <li>
+                                회원님의 총 이용한도는 일시불, 할부, 해외이용 및 현금서비스가 모두 포함된 이용가능 금액이며, 신용도 및 이용실적에 따라 평가 시스템에 의하여 증액 또는 감액 될 수 있습니다.
+                                <br>* <span style="color:#0070D2;">가족회원의 카드 이용액은 본인회원 한도 내에서 합산하여 운용합니다.</span>
+                            </li>
+                            <li>
+                                회원님의 이용한도는 타 금융기관의 거래정보와 신용상태에 따라 조정될 수 있습니다.
+                                <br>또한 비금융기관의 신용정보에 따라서도 회원님의 신용도가 악화 되었다고 판단되는 경우 한도하향 및 카드이용이 정지될 수 있습니다.
+
+                            </li>
+                            <li>카드론 한도는 명세서 작성시점 기준이며, 회원님의 신용상태, 이용실적, 외부기관 신용정보에 따라 변동 또는 거절될 수 있습니다.</li>
+                            <li>결제대금 연체 시 연체료가 부과되며, 카드거래정지 회원님의 신용도와 한도하향에 영향을 미칠 수 있습니다.</li>
+                            <li>
+                                회원님의 신용카드 및 대출이용금액, 연체정보 등은 신용정보법에 따라 은행연합회, 여신금융협회, 신용평가회사 등을 통해 금융기관
+                                간에 공유될 수 있습니다. 공유된 정보는 신용평가에 활용되어 금융활동에 긍정적 또는 부정적 영향을 미칠 수 있습니다.
+                            </li>
+                            <li>현금서비스를 과도하게 이용할 경우 신용등급에 부정적 영향을 미칠 수 있습니다.</li>
+                        </ul>
+
+                        <h4>후불교통카드</h4>
+                        <ol>
+                            <li>
+                                1. <span style="color:#0070D2;">은행영업 마감(16시)이후 결제대금 입금 시</span> 당일 결제가 되지 않을 수도 있으니 유의하시기 바랍니다.
+                            </li>
+                            <li>
+                                2. 카드결제대금이 결제일까지 완납이 되지 않은 경우에는 연체로 적용되며, 
+                                <span style="color:#0070D2;">연체 시에는 교통이용 승인거절 대상으로 해당 교통기관에 등록되어 후불교통카드 이용이 제한됩니다.</span>
+
+                            </li>
+                            <li>
+                                3. 미납금액 완납 시 교통이용 승인거절 해제 정보를 해당 교통기관에 등록하여 거래정지가 해제된 후 이용이 가능합니다.
+                                교통기관 등록해제 정보 적용기간 : 지하철 1-2 영업일 후, 버스 1-3 영업일 후
+                            </li>
+                        </ol>
+                        <!-- 체크카드의 경우// -->
+
+                        <!-- 신용카드의 경우// -->
+                        <h3>카드이용내역</h3>
+ 
+                        <h4>해외이용안내</h4>
+                        <ul class="list-dot">
+                            <li>해외에서 신용카드 이용시 IC칩 비밀번호 입력에 필수인 경우가 많습니다.</li>
+                            <li>해외 출국 전 가까운 영업점에 방문하시어 IC칩 비밀번호를 설정하시기 바랍니다.</li>
+                            <li>해외 이용시 국제카드사 수수료(1%)와 해외이용수수료(0.2%)가 포함되어 당사 접수일의 최초 고시 전신환매도율이 적용됩니다.</li>
+                            <li>해외가맹점에서 원화(KRW)로 결제하실 경우 가맹점에서 일정의 수수료가 부과되며 국제 브랜드사를 통해 미화(USD)로 환산된 후
+                                원화로 재전환되어 청구됩니다. 이와 같이 이중환전 등의 불이익을 방지하기 위해 해외가맹점 이용시 현지통화로 거래하시는 것이
+                                유리합니다.
+                            </li>
+                        </ul>
+
+                        <h4>연회비 안내</h4>
+                        <ul class="list-dot">
+                            <li>연회비는 매년 청구되며(최초 연회비 면제불가), 연회비 부과 시점 기준 과거 1년 이상 사용하지 않은 카드에 대한 연회비는 부과되지 않습니다.</li>
+                        </ul>
+
+                        <h4>전자금융사기 피해주의</h4>
+                        <ul class="list-dot">
+                            <li>
+                                금융기관 및 공공기관을 사칭하여 신용카드 도용, 우편물 반송, 국세환급, 대출알선 등을 이유로 회원님의 고객정보를 요구하거나 
+                                계좌이체를 유도하는 전화금융사기 사례가 발생하고 있으니 의심스러운 전화를 받으시는 경우에는 응대 하지 마시고, 즉시 통화를
+                                종료하시기 바랍니다. (http://phishing-keeper.fss.or.kr)
+                            </li>
+                        </ul>
+
+                        <h4>전월실적 안내</h4>
+                        <ul class="list-dot">
+                            <li>
+                                카드의 전월실적은 광주은행 홈페이지(https://pib.kjbank.com)에서 확인하실 수 있습니다.
+                                <br>(전체메뉴 ▶ 카드 ▶ 카드조회 ▶ 이용실적현황)
+                            </li>
+                        </ul>
+
+                        <h4>후불교통카드</h4>
+                        <ol>
+                            <li>
+                                1. <span style="color:#0070D2;">은행영업 마감(16시)이후 결제대금 입금 시</span> 당일 결제가 되지 않을 수도 있으니 유의하시기 바랍니다.
+                            </li>
+                            <li>
+                                2. 카드결제대금이 결제일까지 완납이 되지 않은 경우에는 연체로 적용되며, 
+                                <span style="color:#0070D2;">연체 시에는 교통이용 승인거절 대상으로 해당 교통기관에 등록되어 후불교통카드 이용이 제한됩니다.</span>
+
+                            </li>
+                            <li>
+                                3. 미납금액 완납 시 교통이용 승인거절 해제 정보를 해당 교통기관에 등록하여 거래정지가 해제된 후 이용이 가능합니다.
+                                교통기관 등록해제 정보 적용기간 : 지하철 1-2 영업일 후, 버스 1-3 영업일 후
+                            </li>
+                        </ol>
+                        <!-- //신용카드의 경우 -->
+                    </div>
+                    <!-- //이용안내 -->
+                </div>
+            </section>
+
+            <footer>
+                <dl>
+                    <dt class="footer-logo">광주</dt>
+                    <dd>
+                        <address>㈜광주은행, 광주 동구 제봉로 225</address>
+                        대표전화 062-239-5000 | 상담안내 1600-4000, 1588-3388 (해외 82-62-410-2000)
+                    </dd>
+                </dl>
+                <p>※ 본 메일은 발신전용 메일로서 고객님은 수신일 현재 광주은행 메일 수신동의를 하신 상태입니다.<br>
+                    메일 수신을 원치 않으시면 수신거부를 클릭해 주십시오.
+                </p>
+                <p>Copyright 2021 KWANGJU BANK</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
